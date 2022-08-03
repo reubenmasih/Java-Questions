@@ -1,0 +1,20 @@
+public class ArrayToInteger {
+    public static void main(String[] args) {
+        int[] arr={12,13,14,15,634};
+        long x=0;
+        for (int i = 0; i < 5; i++) {
+            int k=0;
+            for (int j = i + 1; j < 5; j++) {
+                int temp=arr[j];
+                while (temp > 0) {
+                    temp /= 10;
+                    k++;
+                }
+
+            }
+            x=x+(arr[i]*((long)Math.pow(10,k)));
+
+        }
+        System.out.println(x);
+    }
+}
